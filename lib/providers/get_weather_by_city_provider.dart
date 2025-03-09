@@ -4,7 +4,7 @@ import 'package:weather_app/services/api_helper.dart';
 
 final weatherByCityNameProvider =
     FutureProvider.autoDispose.family<Weather, String>(
-  (ref, String cityName) async {
+  (ref, String cityName) {
     return ApiHelper.getWeatherByCityName(cityName: cityName);
   },
 );
